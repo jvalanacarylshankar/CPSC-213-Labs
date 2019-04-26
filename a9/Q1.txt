@@ -1,0 +1,26 @@
+time ./sRead 10
+71
+
+real	0m0.111s
+user	0m0.112s
+sys	0m0.000s
+
+
+time ./sRead 100
+1466043
+
+real	0m1.075s
+user	0m1.072s
+sys	0m0.000s
+
+
+time ./sRead 1000
+2463576363942
+
+real	0m10.984s
+user	0m10.976s
+sys	0m0.000s
+
+The CPU time keeps increasing as we increase the number of blocks
+ because it waits for every read to complete before going to the next one.
+

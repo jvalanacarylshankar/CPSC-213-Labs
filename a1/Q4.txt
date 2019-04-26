@@ -1,0 +1,4 @@
+We realised that the older computer was Big Endian and the new computer was 
+Little Endian.
+
+The correct values are : RA = 0x65F607 and D = 0x8151DEFF

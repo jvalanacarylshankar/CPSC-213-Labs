@@ -1,0 +1,31 @@
+time ./tRead 10
+71
+
+real	0m0.019s
+user	0m0.004s
+sys	0m0.012s
+
+
+time ./tRead 100
+1466043
+
+real	0m0.067s
+user	0m0.012s
+sys	0m0.052s
+
+
+time ./tRead 1000
+2463576363942
+
+real	0m0.576s
+user	0m0.012s
+sys	0m0.560s
+
+
+This is faster than sRead because every time there is a read the IO Controller performs the read and the CPU
+performs different tasks at the same time (Here the task is putting threads onto a queue).
+This is more efficient as it does not waste much CPU time.
+
+As the number of blocks increase, the efficiency of tRead decreases compared to aRead. This is because with multiple 
+threads, there are multiple calls to uthread_block() and uthread_join(). This decreases the efficiency of the entire 
+process.

@@ -1,0 +1,6 @@
+java Endianness 1 2 3 4
+java Endianness A B C D
+java Endianness 80 0 0 0
+java Endianness ff 0 0 0
+java Endianness ff ff ff ff
+java Endianness 0 0 0 0

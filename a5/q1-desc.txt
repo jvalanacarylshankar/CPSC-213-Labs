@@ -1,0 +1,10 @@
+1  addr of a is read and used to get x[i] 
+1  addr of a is read, used to get addr of b.y[i]
+2  addr of a is read, used to get addr of b.a and used to get x[i]
+3  * - addr of a is read, used to get b.a and used to get b
+   addr of a is read to get b, which is stored in *  
+2  addr of a is read, used to get addr of b.a and used to get b.y[i]
+
+9 memory reads
+---------------------------------
+5 memory writes as there are 5 assignment statements

@@ -1,0 +1,26 @@
+time ./aRead 10
+71
+
+real	0m0.014s
+user	0m0.012s
+sys	0m0.000s
+
+
+time ./aRead 100
+1466043
+
+real	0m0.014s
+user	0m0.008s
+sys	0m0.004s
+
+
+time ./aRead 1000
+2463576363942
+
+real	0m0.013s
+user	0m0.008s
+sys	0m0.004s
+
+This is faster than sRead because every time there is a read the IO Controller performs the read and the CPU 
+asynchronously performs different tasks at the same time (Here the task is putting pending tasks onto a queue).
+This is more efficient as it does not waste CPU time.

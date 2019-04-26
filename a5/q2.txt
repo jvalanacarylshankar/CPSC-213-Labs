@@ -1,0 +1,3 @@
+In the pop() function, e points to top initially, but the memory allocation that e points to
+is freed before 'e->name' is returned. The data allocated to the pointer e was storing
+had to be moved into another variable before this was done.

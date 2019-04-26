@@ -1,0 +1,3 @@
+The bug was a dangling pointer of the element type. Refactoring the code with reference counting helped keep track of the
+number of pointers pointing to each element (2 when in the list and 3 when in the tree), which helped eliminate the dangling
+pointer that was causing the wrong output.
